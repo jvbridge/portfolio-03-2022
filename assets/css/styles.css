@@ -32,6 +32,7 @@ header h1 {
 }
 header a {
     padding: .5rem;
+    color: var(--tertiary);
 }
 
 main {
@@ -61,10 +62,22 @@ body {
     justify-content: center;
 }
 
-/* we should have a BIG primary project */
-#primary-project {
-    width: 100%;
+#about-me {
+    border: 2px solid;
+    border-color: var(--tertiary);
+    margin: 1.5rem;
+    margin-top: 3rem;
 }
+
+#about-me h2 {
+    justify-self: center;
+    text-align: center;
+}
+#about-me p {
+    margin-top: .5rem;
+}
+
+
 
 .project {
     /* outside of all the containers */
@@ -79,6 +92,18 @@ body {
     flex-direction: column;
 }
 
+
+/* we should have a BIG primary project */
+.primary-project {
+    width: 100%;
+}
+
+/* force secondary projects to have a set image size */
+.secondary-project img {
+    height: 300px;
+    width: 300px;
+}
+
 /* bar with the navigation links */
 nav {
     height: 100%; /* full height */
@@ -89,4 +114,42 @@ nav {
     background-color: grey; /* temporary for visualization */
     display: flex;
     flex-direction: column;
+    font-weight: normal;
+}
+
+nav a {
+    font-family: 'Courier New', Courier, monospace;
+    color:var(--tertiary);
+    text-decoration: none;
+    font-weight: bold;
+    margin: .5rem;
+}
+
+/* only one item per row */
+@media screen and (max-width:1066px){
+    .secondary-project{
+        width: 100%;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:768px){
+    /* nav at top */
+    nav {
+        /* header top */
+        padding-top: var(--header-height);
+        /* remove full side taking up properties */
+        height: auto;
+        width: 100%;
+        position: inherit;
+    }
+    /* remove margin for nav */
+    main {
+        margin-left: 0px;
+    }
+
+    /* remove margin for top bar */
+    #about-me {
+        margin-top: 0px;
+    }
 }
