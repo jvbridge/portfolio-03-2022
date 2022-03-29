@@ -21,6 +21,11 @@
     text-decoration: none;
 }
 
+/* fixes the images leaving their boxess */
+* img {
+    max-width: 100%;
+}
+
 header {
     /* dimensions */
     height: var(--header-height);
@@ -112,6 +117,14 @@ body {
 /* we should have a BIG primary project */
 .primary-project {
     width: 100%;
+}
+
+.primary-project img{
+    max-height: 600px;
+    object-fit: cover;
+    width: 100%;
+   
+    top:0;
 }
 
 /* force secondary projects to have a set image size */
