@@ -4,30 +4,49 @@
     --header-height: 60px;
     --header-border: 2px;
     --navbar-width: 300px;
-}
 
-header footer {
-    /* dimensions */
-    height: 60px;
-    width: 100%;
-    line-height: var(--header-height);
-    background-color: #266150;
+/* palette courtasy of https://coolors.co/ccdbdc-9ad1d4-80ced7-007ea7-003249 */
+    --primary-background: #003249;
+    --secondary-background: #007EA7;
+    --tertiary: #80CED7;
+    --off-color: #9AD1D4;
+    --highlight:#CCDBDC;
+
 }
 
 header {
-    /* position: fixed; /* it floats above the screen! */
+    /* dimensions */
+    height: var(--header-height);
+    width: 100%;
+}
+
+header {
+    position: fixed; /* it floats above the screen! */
     border-bottom: var(--header-border) solid black;
+    z-index: 1;
+    /* background-color: var(--secondary-background); */
+}
+
+header h1 {
+    display: inline-block;
+}
+header a {
+
 }
 
 main {
     /* padding so it won't overlap with the top or side */
     padding: var(--header-height) 0;
     margin-left:var(--navbar-width);
-
 } 
 
 body {
 
+}
+
+#contact{  
+    text-align: right;
+    float: right;
 }
 
 /* main container for each project */
@@ -37,13 +56,16 @@ body {
     flex-direction: row;
 }
 
-#side-nav {
+/* bar with the navigation links */
+nav {
     height: 100%; /* full height */
     width: var(--navbar-width);
     position: fixed;
-    margin-top: var(--header-height) + var(--header-border);
+    top: var(--header-height);
     left: 0;
     background-color: grey; /* temporary for visualization */
+    display: flex;
+    flex-direction: column;
 }
 
 /* classes to set styles easily */
