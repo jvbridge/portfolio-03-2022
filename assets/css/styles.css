@@ -3,7 +3,8 @@
     --background: black;
     --header-height: 60px;
     --header-border: 2px;
-    --navbar-width: 300px;
+    --navbar-width: 250px;
+    --project-width: 300px;
 
 /* palette courtasy of https://coolors.co/ccdbdc-9ad1d4-80ced7-007ea7-003249 */
     --primary-background: #003249;
@@ -12,6 +13,12 @@
     --off-color: #9AD1D4;
     --highlight:#CCDBDC;
 
+}
+
+* a {
+    color: var(--tertiary);
+    color:var(--tertiary);
+    text-decoration: none;
 }
 
 header {
@@ -92,6 +99,15 @@ body {
     flex-direction: column;
 }
 
+.project img {
+    object-fit: cover;
+}
+
+/* makes the paragraphs wrap */
+.project p {
+    white-space: normal;
+    width: var(--project-width);
+}
 
 /* we should have a BIG primary project */
 .primary-project {
@@ -100,8 +116,8 @@ body {
 
 /* force secondary projects to have a set image size */
 .secondary-project img {
-    height: 300px;
-    width: 300px;
+    height: var(--project-width);
+    width: var(--project-width);
 }
 
 /* bar with the navigation links */
@@ -119,8 +135,6 @@ nav {
 
 nav a {
     font-family: 'Courier New', Courier, monospace;
-    color:var(--tertiary);
-    text-decoration: none;
     font-weight: bold;
     margin: .5rem;
 }
@@ -129,6 +143,10 @@ nav a {
 @media screen and (max-width:1066px){
     .secondary-project{
         width: 100%;
+    }
+    .project img {
+        height:auto;
+        width: auto;
     }
 }
 
@@ -148,6 +166,10 @@ nav a {
         margin-left: 0px;
     }
 
+    .project img {
+        height:auto;
+        width: auto;
+    }
     /* remove margin for top bar */
     #about-me {
         margin-top: 0px;
