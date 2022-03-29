@@ -24,14 +24,14 @@ header {
     position: fixed; /* it floats above the screen! */
     border-bottom: var(--header-border) solid black;
     z-index: 1;
-    /* background-color: var(--secondary-background); */
+    background-color: var(--secondary-background);
 }
 
 header h1 {
     display: inline-block;
 }
 header a {
-
+    padding: .5rem;
 }
 
 main {
@@ -41,12 +41,15 @@ main {
 } 
 
 body {
-
+    background-color: var(--primary-background);
+    color: var(--off-color);
 }
 
 #contact{  
     text-align: right;
     float: right;
+    display: flex;
+    flex-direction: column;
 }
 
 /* main container for each project */
@@ -54,6 +57,26 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin: 1.5rem ;
+    justify-content: center;
+}
+
+/* we should have a BIG primary project */
+#primary-project {
+    width: 100%;
+}
+
+.project {
+    /* outside of all the containers */
+    position: relative;
+    background-color: var(--secondary-background);
+    border: 2px solid;
+    justify-self: center;
+    margin: 1.5rem;
+    /* inside the container */
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 /* bar with the navigation links */
@@ -66,13 +89,4 @@ nav {
     background-color: grey; /* temporary for visualization */
     display: flex;
     flex-direction: column;
-}
-
-/* classes to set styles easily */
-.justify-center {
-    justify-content: center;
-}
-/* this applies to the main section of each project */
-.project {
-    /* display: flex; */
 }
