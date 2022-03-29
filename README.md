@@ -11,10 +11,16 @@ as I update my skills.
 
 ## Wireframe
 
+There are two wireframes used for this project one for the desktop version and 
+the other for the mobile version. Both were made using google slides.
+
+Desktop wireframe:
+
 <img src="./assets/images/wireframe.png">
 
-The initial wireframe made in google slides. Used as a simple tool for prototyping sites. 
+Mobile wireframe
 
+<img src="./assets/images/mobile_wireframe.png">
 
 ## Credits
 ## Copyright 
